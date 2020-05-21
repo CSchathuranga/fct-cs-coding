@@ -6,10 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Git/COVID-19/json-20190722.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="lib" path="D:/Git/fct-cs-coding/COVID-19/src/json-20190722.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
