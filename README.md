@@ -1,2 +1,2 @@
 # fct-cs-coding
-This contain all the working of fct-cs-programmnig-help forum
+This contain all the works of fct-cs-programmnig-help forum
