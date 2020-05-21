@@ -11,11 +11,7 @@ public class DataReader {
 	  private static final String JSON_ARRAY = "records";
 	  private static final String COUNTRY = "countriesAndTerritories";
 	  private static final String Selected_Country = "Sri_Lanka";
-	    /**
-	     * This method reads the contents form a JSON file and prints the required data.
-	     * 
-	     * @param filePath the path to JSON file.
-	     */
+
 	    public void readData(String filePath) {
 	        try {
 	            String fileContent = Files.readString(Paths.get(filePath));
