@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"lk.ac.kln.fct.covid19"},{"l":"lk.ac.kln.fct.data.pojo"},{"l":"lk.ac.kln.fct.data.processor"},{"l":"lk.ac.kln.fct.data.utils"}]

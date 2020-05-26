@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"lk.ac.kln.fct.data.utils","l":"Constants"},{"p":"lk.ac.kln.fct.covid19","l":"DataProcessor"},{"p":"lk.ac.kln.fct.data.processor","l":"DataProcessor"},{"p":"lk.ac.kln.fct.covid19","l":"DataReader"},{"p":"lk.ac.kln.fct.data.processor","l":"Main"},{"p":"lk.ac.kln.fct.data.pojo","l":"Record"}]
