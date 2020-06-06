@@ -38,9 +38,9 @@ public class Main {
  */
 	public static Shape createShape(Class<? extends Shape> clazz, Dimension dimension) {
 		try {
-			Constructor<?> con=clazz.getDeclaredConstructor(Dimension.class);
-			con.setAccessible(true);
-			return (Shape)con.newInstance(dimension);
+			Constructor<?> constructor=clazz.getDeclaredConstructor(Dimension.class);
+			constructor.setAccessible(true);
+			return (Shape)constructor.newInstance(dimension);
 		} catch (Exception e) {
 			throw new IllegalArgumentException("Invalid class or invalid Type", e);
 		}
