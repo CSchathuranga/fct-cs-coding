@@ -5,27 +5,28 @@ import java.awt.Color;
 import lk.ac.kln.fct.learn.reflection.core.Shape;
 import lk.ac.kln.fct.learn.reflection.util.Dimension;
 
-public class Rectangle extends Shape {
+public class Square extends Shape {
 	private double h;
 	private double w;
-	private String name = RECTANGLE;
+	private String name = SQUARE;
 	private Color color;
 	
-	public Rectangle(String name) {
+	public Square(String name) {
 		this.name = name;
 	}
 	
-	protected Rectangle(Dimension dim) {
+	private Square(Dimension dim) {
 		this.h = dim.getHeight();
 		this.w = dim.getWidth();
 	}
 	
-	protected Rectangle(double h, double w, String name) {
+	private Square(double h, double w, String name) {
 		this.w = w;
 		this.h = h;
 		this.name = name;
 	}
 	
+
 	@Override
 	public double area() {
 		return h * w;
@@ -35,7 +36,7 @@ public class Rectangle extends Shape {
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setColor(Color color) {
 		this.color = color;
 	}
