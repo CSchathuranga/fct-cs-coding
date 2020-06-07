@@ -58,13 +58,9 @@ public class Main {
 		String fieldName = name.toLowerCase();
 		Class<?> clazz = shape.getClass();
 		try {
-			Method setterMethod=clazz.getDeclaredMethod(setterName,Color.class);
-			setterMethod.setAccessible(true);
+			Method setterMethod=clazz.getDeclaredMethod(setterName,clazz.getDeclaredField(fieldName).getType());
 			setterMethod.invoke(shape, value);
-
-			Method getterMethod=clazz.getMethod(getterName);
-			getterMethod.setAccessible(true);
-			return (String) getterMethod.invoke(shape);
+			return (String) clazz.getMethod(getterName).invoke(shape);
 		} catch (Exception e) {
 			throw new IllegalArgumentException("Invalid class or invalid Type", e);
 		}

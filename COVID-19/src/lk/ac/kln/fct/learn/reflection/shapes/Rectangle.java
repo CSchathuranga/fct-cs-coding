@@ -46,15 +46,15 @@ public class Rectangle extends Shape {
 		int b = color.getBlue();
 		
 		if(r == 0 && g == 0 && b == 0) {
-			return "BLACK";
+			return BLACK;
 		} else if(r == 255 && g == 0 && b == 0) {
-			return "RED";
+			return RED;
 		} else if(r == 0 && g == 255 && b == 0) {
-			return "GREEN";
+			return GREEN;
 		} else if(r == 0 && g == 0 && b == 255) {
-			return "BLUE";
+			return BLUE;
 		} else {
-			return "ERROR";
+			return ERROR;
 		}
 	}
 }
