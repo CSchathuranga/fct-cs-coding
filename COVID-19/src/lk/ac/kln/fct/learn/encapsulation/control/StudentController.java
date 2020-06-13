@@ -1,27 +1,42 @@
 package lk.ac.kln.fct.learn.encapsulation.control;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map.Entry;
 
 import lk.ac.kln.fct.learn.encapsulation.core.Student;
-import lk.ac.kln.fct.learn.encapsulation.core.Subject;
 
-public class StudentController implements Cloneable {
-	private static HashMap<Integer, Student> students = new HashMap<>();
+public class StudentController implements Serializable {
+	public final HashMap<String, Student> students = new HashMap<>();
 	
-	public void addStudent(Integer studentID, String name, String degree, HashMap<String,Subject> subjects, Double gpa) {
-		Student student = new Student(studentID, name, degree,subjects,gpa);
-		students.put(studentID, student);
+	public void addNewStudent(Student s) {
+		students.put(s.getId(), s);
 	}
-	
-	public HashMap<Integer, Student> getStudents() {
-		HashMap<Integer, Student> copyStudents = new HashMap<>();
-		Iterator<Entry<Integer, Student>> it = students.entrySet().iterator();
-		while(it.hasNext()) {
-			Entry<Integer, Student> entry =  it.next();
-			copyStudents.put(entry.getKey(), entry.getValue().clone());
-		}
-		return copyStudents;
+
+	public StudentController clone() {
+		  ObjectOutputStream oos = null;
+	      ObjectInputStream ois = null;
+	      try
+	      {
+	         ByteArrayOutputStream bos = new ByteArrayOutputStream();
+	         oos = new ObjectOutputStream(bos);
+	         oos.writeObject(this);
+	         oos.flush();
+	         ByteArrayInputStream bin = new ByteArrayInputStream(bos.toByteArray());
+	         ois = new ObjectInputStream(bin);
+	         bin.close();
+	         bos.close();
+	         oos.close();
+			 ois.close();
+	         return (StudentController) ois.readObject();
+	      }
+	      catch(Exception e)
+	      {
+	        System.out.println(e.toString());
+	      }
+		return null;
 	}
 }

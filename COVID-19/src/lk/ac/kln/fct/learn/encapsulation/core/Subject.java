@@ -1,9 +1,10 @@
 package lk.ac.kln.fct.learn.encapsulation.core;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Subject implements Cloneable  {
+public class Subject implements Serializable  {
 	private String subjectID;
 	private String subjectName;
 	private ArrayList<Degree> allowedDegrees;
